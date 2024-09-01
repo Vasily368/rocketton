@@ -56,7 +56,6 @@ button {
   text-align: center;
   display: block;
   border-radius: 12px;
-  cursor: url("../images/cursor.svg"), pointer !important;
   color: #fff;
   transition: all 0.2s linear;
   background: #3434DA; }
@@ -100,10 +99,14 @@ button {
   position: relative;
   z-index: 1; }
 
+.header__inner {
+  overflow: hidden; }
+
 .header__nav {
   padding: 22px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 140px; }
 
 .social {
@@ -111,11 +114,17 @@ button {
   justify-content: space-between;
   gap: 16px; }
 
+.social__item-icon {
+  width: 35px;
+  height: 35px; }
+
 .header__bottom {
   position: relative;
   text-align: center; }
 
 .image-moon {
+  display: block;
+  margin: 0 auto;
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -159,6 +168,7 @@ button {
 .slider-slid {
   display: flex;
   flex-direction: column !important;
+  align-items: center;
   text-align: center; }
 
 .slider-img {
@@ -169,6 +179,9 @@ button {
   font-size: 14px;
   text-align: center;
   color: #fff; }
+
+.slider-arrow {
+  cursor: url("../images/cursor.svg"), pointer !important; }
 
 .slider-arrow.swiper-button-prev {
   background: rgba(255, 255, 255, 0.2);
@@ -400,14 +413,14 @@ button {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
   border-radius: 16px; }
 
 .modal__inner {
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   overflow: scroll;
   overflow-x: hidden;
-  height: 500px; }
+  height: 700px; }
 
 .modal__inner::-webkit-scrollbar {
   width: 12px; }
@@ -444,10 +457,13 @@ button {
   margin-bottom: 32px; }
 
 .modal-btn {
+  font-size: 16px;
+  line-height: 26px;
   padding: 14px;
   text-align: center;
   width: 240px;
-  margin: 0 auto;
+  margin: 20px auto;
+  margin-bottom: 0;
   border: none; }
 
 @media(max-width:1111px) {
@@ -560,23 +576,65 @@ button {
   .timeline__list {
     padding: 90px 50px 50px 50px; } }
 @media(max-width:465px) {
+  .logo {
+    display: none; }
+
   .image-moon {
     width: 100%; }
 
   .header__nav {
+    margin-bottom: 24px;
     flex-direction: column;
     align-items: center;
     gap: 24px; }
 
+  .slider-img {
+    height: 118px;
+    width: 118px; }
+
   .header__title > img {
     object-fit: fill;
     width: 100%; }
+
+  .info {
+    padding-bottom: 30px; }
+
+  .features__inner {
+    padding: 0; }
+
+  .roadmap__inner {
+    padding: 0px 0 40px 0; }
+
+  .timeline > ul {
+    padding: 0px; }
+
+  .timeline > ul > li {
+    margin-bottom: 50px; }
 
   .timeline > ul > li > .timeline__item {
     width: 282px; }
 
   .timeline__list-item {
     line-height: 20px; }
+
+  .timeline > ul > li > .text {
+    top: -30px !important;
+    width: 100px; }
+
+  .timeline > ul > li:nth-child(odd) .text {
+    right: 50% !important;
+    transform: translate(60%); }
+
+  .timeline > ul > li:nth-child(even) .text {
+    left: -50% !important;
+    transform: translate(-40%); }
+
+  .timeline__bottom-text {
+    font-size: 30px;
+    line-hight: 20px; }
+
+  .modal__inner {
+    height: 500px; }
 
   .slider-arrow {
     display: none; } }
