@@ -75,7 +75,7 @@ modalBtn.onclick = function() {
 
 const tl = gsap.timeline();
 
-tl.fromTo('.header__btn',{
+tl.fromTo('.header__title',{
            
             opacity: 0,
             y: -100,
@@ -91,7 +91,7 @@ tl.fromTo('.header__btn',{
             y: 0,
             duration: 0.6,
             opacity: 1,
-        }) .fromTo('.header__title',{
+        }) .fromTo('.header__btn',{
            
             opacity: 0,
             y: -100,
@@ -101,6 +101,14 @@ tl.fromTo('.header__btn',{
             opacity: 1,
         }).fromTo('.image-moon',{
             
+            opacity: 0,
+            y: 100,
+        },{
+            y: 0,
+            duration: 0.6,
+            opacity: 1,
+        }).fromTo('.slider-container',{
+           
             opacity: 0,
             y: 100,
         },{
@@ -123,14 +131,6 @@ tl.fromTo('.header__btn',{
             y: 0,
             duration: 0.6,
             opacity: 1,
-        }).fromTo('.slider-container',{
-           
-            opacity: 0,
-            y: 100,
-        },{
-            y: 0,
-            duration: 0.6,
-            opacity: 1,
         })
 
 
@@ -139,7 +139,7 @@ tl.fromTo('.header__btn',{
             scrollTrigger: {
                 trigger: '.info__inner',
                 
-                start: 'bottom bottom',
+                start: 'top center',
             },
             x: 100,
             duration: 0.6,
@@ -149,7 +149,7 @@ tl.fromTo('.header__btn',{
             scrollTrigger: {
                 trigger: '.info__inner',
                
-                start: 'bottom bottom'
+                start: 'top center '
             },
             x: -100,
             duration: 0.6,
